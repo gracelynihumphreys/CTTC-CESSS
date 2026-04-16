@@ -37,6 +37,10 @@ body {
         font-size: 32px; /* Much smaller so it fits on one or two lines */
         line-height: 1.2;
     }
+    body{
+        font-size: 8vw;
+        width: 8vw;
+    }
 }
 
 .blog-img {
