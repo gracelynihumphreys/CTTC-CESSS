@@ -311,6 +311,7 @@ ul {
     min-width: 300px; /* Prevents them from getting too skinny */
     margin: 20px;
     float: none !important; /* Removes the old float logic */
+    text-align:center !important;
 }
 
 .if-break {
@@ -395,6 +396,7 @@ p {
     min-width: 300px;
     max-width: 100%;
     margin-bottom: 30px;
+    text-align:center!important;
 }
 
 /* --- Media Queries for Mobile (Under 768px) --- */
@@ -443,4 +445,43 @@ p {
     color: white;
     padding: 30px 15px;
     margin-top: 50px;
+}
+
+/* Final Mobile Fix - Add to bottom of CSS */
+@media (max-width: 768px) {
+    /* 1. Reset the container to stack vertically */
+    .support-container {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
+    }
+
+    /* 2. Force every section to take full width and center text */
+    #section-one, #section-two, #if-break {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 0 30px 0 !important; /* Removes side margins */
+    }
+
+    /* 3. Force lists and list items to lose their "left-aligned" nature */
+    #section-one ul, #section-two ul, #if-break ul, 
+    .text-section ul, ul {
+        text-align: center !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        display: block !important;
+    }
+
+    #section-one li, #section-two li, #if-break li {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Fix the paragraph margin that was pushing text to the right */
+    p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90%;
+    }
 }
