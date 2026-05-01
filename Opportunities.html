@@ -7,6 +7,8 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -19,6 +21,10 @@
             }
             .top-part {
                 font-family: 'Joan';font-size: 22px;
+            }
+            
+            p, span, footer, ul {
+                font-family:'roboto';
             }
         </style>
     </head>
@@ -41,7 +47,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Inclusion.html">Inclusion</a></li>
-                        <li><a href="Resource.html">Guide and Resources to Professionalism</a></li>
+                        <li><a href="Resource.html">Professionalism</a></li>
                         <li class="active"><a href="Opportunities.html">Opportunities</a></li>
                         <li><a href="StemSpot.html">STEM Spotlight</a></li>
                         <li><a href="AddResource.html">Additional Resources</a></li>
@@ -59,13 +65,13 @@
         <div class="content-wrapper">
             <!-- Group text together so they stay stacked -->
             <div class="text-section">
-                <h2>Early College Credit</h2>
+                <h2 class='op-h2'>Early College Credit</h2>
                 <ul>
                     <li><a target='blank' href='https://sites.google.com/sau8.org/2025-26computerengineering/early-college-credit'>Early College Credit Through CRTC</a></li>
                     <li><a target='blank' href='https://www.nhti.edu/academics/early-college/'>Early College Credit Online - NHTI</a></li>
                 </ul>
 
-                <h2>Internships and Programs</h2>
+                <h2 class='op-h2'>Internships and Programs</h2>
                 <ul>
                     <li><a target='blank' href='https://ceps.unh.edu/outreach/tech-camp'>UNH Tech Camp</a></li>
                     <li><a target='blank' href='https://www.iol.unh.edu/stem/hightech-bound'>UNH HighTech Bound</a></li>
@@ -87,7 +93,7 @@
                     <li><a target='blank' href='https://stemgateway.nasa.gov/s/course-offering/a0BSJ000004pG6r2AE/space-physical-sciences-internship-summer-2026'>NASA Space-Physical Sciences Internship</a></li>
                 </ul>
     
-                <h2>Scholarships</h2>
+                <h2 class='op-h2'>Scholarships</h2>
                 <ul>
                     <li><a target='blank' href='https://gfwcnh.org/scholarships'>General Federation of Women</a></li>
                     <li><a target='blank' href='https://www.scholarships.com/financial-aid/college-scholarships/scholarship-directory/residence-state/new-hampshire/fisher-cats-foundation-scholar-athlete-scholarship#'>Fisher Cats - NH Scholars</a></li>
@@ -103,7 +109,15 @@
                 <br><img id='scholar-img' src='https://t4.ftcdn.net/jpg/01/96/87/57/360_F_196875700_4rLgO7QPC1lmtTny5VOceDY80DJasArn.jpg'>
             </div>
         </div>
-        
+        <script>
+            $(window).scroll(function() {
+              if ($(document).scrollTop() > 50) {
+                $('.custom-nav').css('padding', '2px 0');
+              } else {
+                $('.custom-nav').css('padding', '10px 0');
+              }
+            });
+        </script>
     </body>
     <footer class="footer">
         <p>This site was built by Gracelyn Humphreys and Camden Ouellette</p>
