@@ -7,6 +7,8 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -17,8 +19,12 @@
             body{
                 font-family: 'Joan';
             }
-            .top-part {
+            .top-part, .support-format {
                 font-family: 'Joan';font-size: 22px;
+            }
+            
+            p, span, footer, ul {
+                font-family:'roboto';
             }
         </style>
     </head>
@@ -41,7 +47,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Inclusion.html">Inclusion</a></li>
-                        <li><a href="Resource.html">Guide and Resources to Professionalism</a></li>
+                        <li><a href="Resource.html">Professionalism</a></li>
                         <li><a href="Opportunities.html">Opportunities</a></li>
                         <li><a href="StemSpot.html">STEM Spotlight</a></li>
                         <li><a href="AddResource.html">Additional Resources</a></li>
@@ -74,7 +80,7 @@
                 </ul>
             </div>
             <div id='section-two'>
-                <br><br><p><strong>If you have faced unfair treatment or discrimination (especially within the CRTC classroom) here are resources to help:</strong></p>
+                <br><br><p class='support-format'><strong>If you have faced unfair treatment or discrimination (especially within the CRTC classroom) here are resources to help:</strong></p>
                 <ul class='add-resource'>
                     <li>CRTC@sau8.org</li>
                     <li><a target='blank' href='https://thecrtc.org/contact-us/'>CRTC Contact Page</a></li>
@@ -112,12 +118,21 @@
                         </ul>
                     </li>
                 </ul>
-                <h2>When this website inevitably breaks, please contact email below:</h2>
-                <p>gracelynihumphreys@gmail.com</p>
+                <h2>If you have concerns related to website functionality or other issues, please contact the email below:</h2>
+                <span>gracelynihumphreys@gmail.com</span>
                 <h2>Any other concerns not related to website functionality, contact email below:</h2>
-                <p>caouellette26@gmail.com</p>
+                <span>caouellette26@gmail.com</span>
             </div>
         </div>
+        <script>
+            $(window).scroll(function() {
+              if ($(document).scrollTop() > 50) {
+                $('.custom-nav').css('padding', '2px 0');
+              } else {
+                $('.custom-nav').css('padding', '10px 0');
+              }
+            });
+        </script>
     </body>
     
     <footer class="footer">
