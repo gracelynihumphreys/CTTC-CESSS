@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -19,6 +21,10 @@
             }
             .top-part {
                 font-family: 'Joan';font-size: 22px;
+            }
+            
+            p, span, footer, ul {
+                font-family:'roboto';
             }
         </style>
     </head>
@@ -41,7 +47,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li class="active"><a href="Inclusion.html">Inclusion</a></li>
-                        <li><a href="Resource.html">Guide and Resources to Professionalism</a></li>
+                        <li><a href="Resource.html">Professionalism</a></li>
                         <li><a href="Opportunities.html">Opportunities</a></li>
                         <li><a href="StemSpot.html">STEM Spotlight</a></li>
                         <li><a href="AddResource.html">Additional Resources</a></li>
@@ -91,6 +97,15 @@
                 <li><a target='blank' class='add-resource' href='https://www.neurodiversitynetwork.net/neurodivergent-skills'>Neurodiversity Network</a></li>
             </ul>
         </div>
+        <script>
+            $(window).scroll(function() {
+              if ($(document).scrollTop() > 50) {
+                $('.custom-nav').css('padding', '2px 0');
+              } else {
+                $('.custom-nav').css('padding', '10px 0');
+              }
+            });
+        </script>
     </body>
     <footer class="footer">
         <p>This site was built by Gracelyn Humphreys and Camden Ouellette</p>
