@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -33,6 +35,10 @@
                     min-height: 500px;
                 }
             }
+            
+            p, span, footer, ul {
+                font-family:'roboto';
+            }
         </style>
     </head>
     <body>
@@ -54,14 +60,13 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="Inclusion.html">Inclusion</a></li>
-                        <li><a href="Resource.html">Guide and Resources to Professionalism</a></li>
+                        <li><a href="Resource.html">Professionalism</a></li>
                         <li><a href="Opportunities.html">Opportunities</a></li>
                         <li><a href="StemSpot.html">STEM Spotlight</a></li>
                         <li><a href="AddResource.html">Additional Resources</a></li>
                         <li><a href="Support.html">Support and Contacts</a></li>
                     </ul>
                 </div>
-            
             </div> 
         </nav>
         <div class="top-part">
@@ -75,6 +80,15 @@
             <br><h2 id='inclusive-excellence'>Committed to Inclusive Excellence</h2>
             <p>The Students of CRTC's Computer Engineering program are commited to the fostering not just creativity and technical skills, but a sense of belonging for <strong>all students</strong>. We know that diversity strengthens our communities and are committed to making sure our classroom is a place where any student can learn, joke, collaborate, and ultimately grow into a successful professional.</p>
         </div>
+        <script>
+            $(window).scroll(function() {
+              if ($(document).scrollTop() > 50) {
+                $('.custom-nav').css('padding', '2px 0');
+              } else {
+                $('.custom-nav').css('padding', '10px 0');
+              }
+            });
+            </script>
     </body>
     
     <footer class="footer">
