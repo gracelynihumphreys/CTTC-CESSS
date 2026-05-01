@@ -214,14 +214,43 @@ ul {
   text-align: center;    /* Centers text */
 }
 
-/* Container to hold both lists side-by-side */
+/* --- Optimized Flex Container --- */
 .support-container {
     display: flex;
-    justify-content: center;
-    align-items: center; /* Centers items horizontally in column mode */
-    flex-direction: row; 
-    flex-wrap: wrap;
-    text-align: center; /* Default text centering */
+    flex-direction: row;
+    flex-wrap: wrap;        
+    justify-content: center; 
+    align-items: flex-start; /* Aligns the tops of all columns */
+    padding: 40px 20px;
+    gap: 30px;               /* Adds breathing room between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Column Styling --- */
+#section-one, #section-two, #if-break {
+    flex: 1;                
+    min-width: 300px;       /* Keeps columns from getting too squashed */
+    margin: 0;              
+    text-align: center;
+    float: none !important; /* Kills any remaining float logic */
+}
+
+/* Remove excessive spacing in the middle section */
+#section-two p {
+    margin-top: 0;          /* Aligns the paragraph top with the H2 next to it */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .support-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #section-one, #section-two, #if-break {
+        width: 100%;
+        max-width: 600px;
+    }
 }
 
 /* Force centering on mobile */
@@ -485,4 +514,3 @@ p {
     color: white !important;
 }
 
-/* please just work */
