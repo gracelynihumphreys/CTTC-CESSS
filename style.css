@@ -514,3 +514,24 @@ p {
     color: white !important;
 }
 
+/* Ensure the container is pulling everything to the top */
+.support-container {
+    display: flex;
+    align-items: flex-start !important; /* Forces all columns to start at the exact same Y-coordinate */
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* Remove the "indent" and extra space from the nested contact lists */
+#if-break ul ul {
+    padding-left: 0 !important;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Remove default margins from headers to ensure they line up with text next to them */
+#section-one h2, #section-two p, #if-break h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
