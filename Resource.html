@@ -7,6 +7,8 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -23,6 +25,14 @@
             
             div#skills h2 {
                 color: #1967d2;
+            }
+            
+            p, span, footer, ul {
+                font-family:'roboto';
+            }
+            
+            h2{
+                color:#003366!important;
             }
         </style>
     </head>
@@ -45,7 +55,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Inclusion.html">Inclusion</a></li>
-                        <li class="active"><a href="Resource.html">Guide and Resources to Professionalism</a></li>
+                        <li class="active"><a href="Resource.html">Professionalism</a></li>
                         <li><a href="Opportunities.html">Opportunities</a></li>
                         <li><a href="StemSpot.html">STEM Spotlight</a></li>
                         <li><a href="AddResource.html">Additional Resources</a></li>
@@ -109,7 +119,7 @@
         <p>The goal of these uniforms is to learn how to dress professionally, so you can put your best foot forward in your career. Though the uniform is standardized for consistency across the classroom, each student is an individual whose presentation of professionalism may vary based on their personality, physical features, and more. All expressions and appearances are valid as long as you are putting your best foot forward into the professional world. This means wearing a uniform you can feel confident in, keeping an appearance that is neat and functional for your role, and dressing consistently with your position and identity. By dressing appropriately and confidently, each student can learn to feel at home in their environment and in their own identity as the professional they are working to become.</p>
         <br><p>It is important to awknowledge that STEM has historically restricted access to minorities, preventing individuals from joining communitites and projects based on their race, ethnic or cultural background, gender, and more. This is why it is important to be mindful of our intentions and choices around what is considered professional. The traditional idea of professionalism in STEM has was historically a masculine and eurocentric look and viewpoint. However, this community is all about acceptance and excellence in STEM, not about upholding outdated traditions that harm the STEM community. <br><br>As such, it is important to remind all students that you belong in STEM and a person of any race, ethnicity, gender, or background can be a successful professional without changing themselves to fit into outdated and prejudiced expectations. Natural hair is professional. Traditional clothing is professional. There is no unprofessional color or style so long as it fits within the expectations of the work you are completing for your job or your class. Basically, the most important thing is your absolute right to <strong>be you</strong> and pursue your dreams in STEM in the way that makes most sense for you as an individual.</p>
         <div class='resource-list'>
-        <br><br><p><strong>For more information, check out these resources:</strong></p>
+        <br><br><p style='text-align:center;'><strong>For more information, check out these resources:</strong></p>
             <ul>
                 <li><a target='blank' href='https://emtrain.com/blog/sexual-harassment/natural-hair-in-workplace/'>Eliminating Discrimination Against Natural Hair in the Workplace</a></li>
                 <li><a target='blank' href='https://www.thecrownact.com/'>The Crown Act</a></li>
@@ -122,7 +132,7 @@
                 <li><a target='blank' href='https://online.uttyler.edu/degrees/business/professional-graduate/masters-of-science-engineering-leadership/effective-collaboration/'>How Effective Collaboration Drives Success in Engineering Leadership</a></li>
             </ul>
         </div>
-        <br><br><p>If you have faced unfair treatment or discrimination (especially within the CRTC classroom) here are resources to help:</p>
+        <br><br><p style='text-align:center;'>If you have faced unfair treatment or discrimination (especially within the CRTC classroom) here are resources to help:</p>
         <ul>
             <li>CRTC@sau8.org</li>
             <li><a target='blank' href='https://thecrtc.org/contact-us/'>CRTC Contact Page</a></li>
@@ -133,6 +143,15 @@
             <li>Your School's Admin</li>
             <li>A Creator of This Site: gracelynihumphreys@gmail.com</li>
         </ul>
+        <script>
+            $(window).scroll(function() {
+              if ($(document).scrollTop() > 50) {
+                $('.custom-nav').css('padding', '2px 0');
+              } else {
+                $('.custom-nav').css('padding', '10px 0');
+              }
+            });
+        </script>
     </body>
     
     <footer class="footer">
