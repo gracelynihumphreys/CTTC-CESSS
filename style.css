@@ -237,12 +237,6 @@ ul {
 }
 
 @media (min-width: 1024px) {
-    #notes-list {
-        width: 60%; /* Prevents the form from being too wide/stretched */
-        max-width: 800px;
-        margin-bottom: 100px;
-    }
-    
   h1 {
       padding-top: 30px!important;
   }
