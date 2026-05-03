@@ -590,45 +590,5 @@ p {
     line-height: 1.8;  /* Optional: adds breathing room between lines */
 }
 
-/* This replaces the float logic */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;       /* Allows columns to stack on small screens */
-    justify-content: center; 
-    gap: 40px;             /* Space between the two columns */
-    width: 100%;
-    margin: 0 auto;
-}
 
-.flex-column {
-    flex: 1;               /* Makes columns equal width */
-    min-width: 300px;      /* Prevents them from getting too skinny */
-    max-width: 500px;
-}
 
-/* Remove these old properties if they are still there */
-#li-one, #li-two {
-    float: none !important; 
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    list-style-type: none !important;
-}
-
-/* Ensure the footer clears everything properly */
-footer {
-    clear: both;
-    display: block;
-    width: 100%;
-}
-
-/* Removes bullets from the new flex columns */
-.flex-column ul {
-    list-style-type: none; /* Removes the dots */
-    padding-left: 0;       /* Removes the indent */
-    margin-left: 0;
-}
-
-/* Optional: If the text is still hitting the edge of the screen */
-.flex-column li {
-    margin-bottom: 8px;    /* Adds a little breathing room between links */
-}
