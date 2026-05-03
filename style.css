@@ -620,3 +620,15 @@ footer {
     display: block;
     width: 100%;
 }
+
+/* Removes bullets from the new flex columns */
+.flex-column ul {
+    list-style-type: none; /* Removes the dots */
+    padding-left: 0;       /* Removes the indent */
+    margin-left: 0;
+}
+
+/* Optional: If the text is still hitting the edge of the screen */
+.flex-column li {
+    margin-bottom: 8px;    /* Adds a little breathing room between links */
+}
