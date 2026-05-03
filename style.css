@@ -240,6 +240,7 @@ ul {
     #notes-list {
         width: 60%; /* Prevents the form from being too wide/stretched */
         max-width: 800px;
+        margin-bottom: 100px;
     }
     
   h1 {
