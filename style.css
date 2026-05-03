@@ -611,6 +611,7 @@ p {
     float: none !important; 
     margin-left: 0 !important;
     margin-right: 0 !important;
+    list-style-type: none !important;
 }
 
 /* Ensure the footer clears everything properly */
