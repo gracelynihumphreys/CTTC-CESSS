@@ -1,5 +1,70 @@
+/* --- Global Resets --- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     text-align: center;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
+}
+
+/* --- Navigation Customization --- */
+.custom-nav.navbar-inverse {
+    background-color: #003366; 
+    background-image: none; 
+    border-color: white;
+}
+
+.custom-nav.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 15px;
+}
+
+.custom-nav.navbar-inverse {
+    background-color: #003366 !important; /* Force your brand blue */
+    border: none;
+    border-bottom: 3px solid #D4AF37; /* The "Gold" accent line */
+    padding: 10px 0;
+    transition: all 0.4s ease;
+}
+
+/* Remove the "Black Box" from Active Link */
+.custom-nav.navbar-inverse .navbar-nav > .active > a, 
+.custom-nav.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: transparent !important; /* Removes the black/dark box */
+    color: #D4AF37 !important; /* Highlights active page with gold */
+    font-weight: bold;
+}
+
+/* Modern Link Styling */
+.custom-nav.navbar-inverse .navbar-nav > li > a {
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px; /* Slightly smaller for professional look */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect: Gold text instead of background change */
+.custom-nav.navbar-inverse .navbar-nav > li > a:hover {
+    color: #D4AF37 !important;
+    background-color: transparent !important;
+}
+
+/* Fix for the brand/logo */
+.navbar-inverse .navbar-brand {
+    font-family: 'Joan', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white !important;
+}
+
+/* Align Logo and Links */
+.custom-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 h1, h2, p, span {
@@ -10,13 +75,11 @@ h1, h2, p, span {
 .top-part {
     text-align: center;
     color: #D4AF37;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding: 100px 20px 60px 20px;
     font-weight: bold;
     background-color: #003366; 
 }
 
-/* Responsive H1 for the top-part */
 .top-part h1 {
     font-size: 65px; /* Default size for desktop */
     margin: 0;
@@ -25,11 +88,337 @@ h1, h2, p, span {
     color:white;
 }
 
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 15px;
+    color:#003366;
+}
+
+
+p {
+    font-size: 18px;
+    /* Use percentage or smaller margins for mobile compatibility */
+    margin: 20px 75px;
+    max-width: 90%; 
+    line-height: 1.6;
+    text-align: left;
+}
+
+img {
+    text-align:center;
+}
+
+ul {
+    list-style-type:none;
+    padding-left: none;
+    margin-left: none;
+    text-align: left;
+}
+
+.container{
+    display: flex;
+    justify-content: center; /* Centers the list box horizontally */
+}
+
+#center {
+    text-align: center!important;
+}
+
+.contact-list {
+    display:flex;
+    justify-content:center;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366; 
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-section p, .footer-section span {
+    color: white;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-contact-list ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-btn {
+    margin-top: 10px;
+    background-color: #D4AF37;
+    border: none;
+    color: #003366 !important;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: row;      
+    justify-content: center;  
+    align-items: flex-start;  
+    gap: 100px;               
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;           
+}
+
+.footer-column {
+    flex: 1;                  
+    text-align: left;         
+    min-width: 300px;
+}
+
+.contact-statement {
+    display: block;   
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #D4AF37;          
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-contact-list ul {
+        padding-left: 0;
+    }
+    
+    .footer-grid {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+  h1{
+      padding-top: 30px!important;
+  }
+  
+  .edu-img {
+    height: auto;
+    width:1000px;
+  }
+  
+  #scholar-img {
+      margin-top: 100px;
+  }
+  
+  #li-one {
+      float: left;
+      margin-left: 200px;
+      margin-bottom: 50px;
+  }
+  
+  #li-two {
+      float: right;
+      margin-right: 200px;
+      margin-bottom: 50px;
+  }
+  
+  .blog-img{
+      width: auto!important;
+      height: 400px!important;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container-leftish {
+      margin-left: 400px;
+  }
+  
+  #foot-list{
+      margin-left: 50px!important;
+  }
+  
+  .edu-img {
+      width:800px!important;
+      height: auto!important;
+  }
+}
+
 /* Tablet Screens (e.g., iPads) */
 @media (max-width: 992px) {
     .top-part h1 {
         font-size: 45px;
         margin-top: 50px!important;
+    }
+    
+    .support-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #section-one, #section-two, #if-break {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    #support-list {
+        padding-left:20px!important;
+    }
+    
+    #notes-list {
+        padding-left:30px!important;
+    }
+}
+
+/* Optional: Make it look good on phones */
+@media (max-width: 768px) {
+    .content-wrapper {
+    flex-direction: column; /* Stacks image under text on small screens */
+    align-items: center;
+    text-align: left;
+    }
+  
+    .op-h2 {
+      text-align:center;
+    }
+
+    .support-container {
+        align-items: flex-start !important; /* Forces all columns to start at the exact same Y-coordinate */
+        justify-content: center;
+        gap: 40px;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    
+    /* Fix for any paragraph margins that might push text off-center */
+    .support-container p {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding-left:20px;
+    }
+
+    #section-one, #section-two, #if-break {
+        width: 100%;
+        text-align: center !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Target lists specifically because they often have default left padding */
+    #section-one ul, #section-two ul, #if-break ul {
+        padding-left: 0;
+        list-style-type: none;
+        display: inline-block; /* Helps text-align: center work on the block */
+        text-align: left;
+        width: 100%;
+    }
+    
+    .top-part h1 {
+        font-size: 28px; /* Scales down title for small screens */
+    }
+
+    .top-part {
+        padding-top: 80px; /* Adjust for fixed navbar */
+    }
+
+    p {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    /* Fixes list alignment on mobile */
+    ul {
+        padding-left: 0;
+    }
+
+    .add-resource {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Scale images for mobile */
+    .edu-img, .shirt-img {
+        width: 90% !important;
+        height: auto;
+    }
+
+    /* 2. Force every section to take full width and center text */
+    #section-one, #section-two, #if-break {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 0 30px 0 !important; /* Removes side margins */
+    }
+
+    /* 3. Force lists and list items to lose their "left-aligned" nature */
+    #section-one ul, #section-two ul, #if-break ul, 
+    .text-section ul {
+        text-align: left !important;
+        padding-left: 25 !important;
+        margin-left: 0 !important;
+        display: block !important;
+    }
+
+    #section-one li, #section-two li, #if-break li {
+        text-align: left !important;
+        margin-bottom: 10px;
+        padding-left:10px;
+    }
+
+    /* 4. Fix the paragraph margin that was pushing text to the right */
+    p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90%;
+    }
+    
+    .need-space {
+        margin-top: 20px!important;
     }
 }
 
@@ -67,18 +456,6 @@ hr {
     text-align: center;
 }
 
-h2 {
-    font-size: 30px;
-    font-style: bold;
-    color:#003366;
-}
-
-p {
-    font-size: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
 .add-resource{
     font-size:20px;
 }
@@ -93,29 +470,8 @@ p {
     color:#D4AF37;
 }
 
-.footer {
-    clear: both; /* This is the magic line */
-    background-color: #003366; 
-    color: white;
-    margin-top: 50px;
-    padding: 10px;
-    text-align:center!important;
-}
-
-.footer p {
-    font-size:15px;
-    text-align:center;
-}
-
 #inclusive-excellence {
     margin: 25px;
-}
-
-ul {
-    list-style-type:none;
-    padding-left: none;
-    margin-left: none;
-    text-align: center;
 }
     
 .content-wrapper {
@@ -145,30 +501,10 @@ ul {
   padding-top: 75px;
 }
 
-/* Optional: Make it look good on phones */
-@media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column; /* Stacks image under text on small screens */
-    align-items: center;
-    text-align: center;
-  }
-}
-
 .shirt-img {
     width: 250px;
     height:auto;
-}
-
-@media (min-width: 1024px) {
-  
-  .blog-img{
-      width: auto;
-      height: 500px;
-  }
-  
-  .shirt-img {
     margin-top: 100px;
-  }
 }
 
 .resource-list {
@@ -180,40 +516,6 @@ ul {
     width:450px;
 }
 
-@media (min-width: 1024px) {
-  h1{
-      padding-top: 30px!important;
-  }
-  
-  .edu-img {
-    height: auto;
-    width:1000px;
-  }
-  
-  #scholar-img {
-      margin-top: 100px;
-  }
-  
-  #li-one {
-      float: left;
-      margin-left: 200px;
-      margin-bottom: 50px;
-  }
-  
-  #li-two {
-      float: right;
-      margin-right: 200px;
-      margin-bottom: 50px;
-  }
-}
-
-ul {
-  list-style-type: none; /* Removes bullets */
-  padding: 0;            /* Removes default padding */
-  margin: 0;             /* Removes default margin */
-  text-align: center;    /* Centers text */
-}
-
 /* --- Optimized Flex Container --- */
 .support-container {
     display: flex;
@@ -221,8 +523,8 @@ ul {
     flex-wrap: wrap;        
     justify-content: center; 
     align-items: flex-start; /* Aligns the tops of all columns */
-    padding: 40px 20px;
-    gap: 30px;               /* Adds breathing room between columns */
+    padding: 20px;
+    gap: 20px;               /* Adds breathing room between columns */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -239,53 +541,6 @@ ul {
 /* Remove excessive spacing in the middle section */
 #section-two p {
     margin-top: 0;          /* Aligns the paragraph top with the H2 next to it */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 992px) {
-    .support-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    #section-one, #section-two, #if-break {
-        width: 100%;
-        max-width: 600px;
-    }
-}
-
-/* Force centering on mobile */
-@media (max-width: 768px) {
-  .op-h2 {
-      text-align:center;
-  }
-    
-    .support-container {
-        flex-direction: column; /* Stacks the sections */
-        padding: 20px;
-    }
-
-    #section-one, #section-two, #if-break {
-        width: 100%;
-        text-align: center !important;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* Target lists specifically because they often have default left padding */
-    #section-one ul, #section-two ul, #if-break ul {
-        padding-left: 0;
-        list-style-type: none;
-        display: inline-block; /* Helps text-align: center work on the block */
-        text-align: center;
-        width: 100%;
-    }
-
-    /* Fix for any paragraph margins that might push text off-center */
-    .support-container p {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
 }
 
 #section-one, #section-two {
@@ -307,67 +562,16 @@ ul {
     font-weight: bold;
 }
 
-
-
-/* --- Global Resets --- */
-* {
-    box-sizing: border-box;
+#if-break ul ul {
+    padding-left: 0 !important;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-body {
-    text-align: center;
-    overflow-x: hidden; /* Prevents side-scrolling on mobile */
-}
-
-/* --- Typography & Content --- */
-h2 {
-    font-size: 28px;
-    font-weight: bold;
-    padding: 0 15px;
-}
-
-p {
-    font-size: 18px;
-    /* Use percentage or smaller margins for mobile compatibility */
-    margin: 20px auto;
-    max-width: 90%; 
-    line-height: 1.6;
-    text-align: left;
-}
-
-/* --- Header Section --- */
-.top-part {
-    color: #D4AF37;
-    padding: 100px 20px 60px 20px;
-    font-weight: bold;
-    background-color: #003366; 
-}
-
-.top-part h1 {
-    font-size: 45px; 
-    margin: 0;
-    word-wrap: break-word;
-}
-
-/* --- Navigation Customization --- */
-.custom-nav.navbar-inverse {
-    background-color: #003366; 
-    background-image: none; 
-    border-color: white;
-}
-
-.custom-nav.navbar-inverse .navbar-nav > li > a {
-    color: white;
-    font-size: 15px;
-}
-
-/* --- Support Page Layout (The Flexbox Fix) --- */
-.support-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
+/* Remove default margins from headers to ensure they line up with text next to them */
+#section-one h2, #section-two p, #if-break h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 #section-one, #section-two, #if-break {
@@ -378,138 +582,10 @@ p {
     text-align:center!important;
 }
 
-/* --- Media Queries for Mobile (Under 768px) --- */
-@media (max-width: 768px) {
-    .top-part h1 {
-        font-size: 28px; /* Scales down title for small screens */
-    }
-
-    .top-part {
-        padding-top: 80px; /* Adjust for fixed navbar */
-    }
-
-    p {
-        margin-left: 15px;
-        margin-right: 15px;
-        font-size: 16px;
-    }
-
-    .support-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Fixes list alignment on mobile */
-    ul {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .add-resource {
-        font-size: 16px;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    /* Scale images for mobile */
-    .edu-img, .shirt-img {
-        width: 90% !important;
-        height: auto;
-    }
-}
-
-/* --- Footer --- */
-.footer {
-    background-color: #003366; 
-    color: white;
-    padding: 30px 15px;
-    margin-top: 50px;
-    text-align:center!important;
-}
-
-/* Final Mobile Fix - Add to bottom of CSS */
-@media (max-width: 768px) {
-    /* 1. Reset the container to stack vertically */
-    .support-container {
-        display: flex;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 10px !important;
-    }
-
-    /* 2. Force every section to take full width and center text */
-    #section-one, #section-two, #if-break {
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 0 30px 0 !important; /* Removes side margins */
-    }
-
-    /* 3. Force lists and list items to lose their "left-aligned" nature */
-    #section-one ul, #section-two ul, #if-break ul, 
-    .text-section ul, ul {
-        text-align: center !important;
-        padding-left: 0 !important;
-        margin-left: 0 !important;
-        display: block !important;
-    }
-
-    #section-one li, #section-two li, #if-break li {
-        text-align: center !important;
-        margin-bottom: 10px;
-    }
-
-    /* 4. Fix the paragraph margin that was pushing text to the right */
-    p {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 90%;
-    }
-}
-
-/* --- Modernized Navbar --- */
-.custom-nav.navbar-inverse {
-    background-color: #003366 !important; /* Force your brand blue */
-    border: none;
-    border-bottom: 3px solid #D4AF37; /* The "Gold" accent line */
-    padding: 10px 0;
-    transition: all 0.4s ease;
-}
-
-/* Align Logo and Links */
-.custom-nav .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Remove the "Black Box" from Active Link */
-.custom-nav.navbar-inverse .navbar-nav > .active > a, 
-.custom-nav.navbar-inverse .navbar-nav > .active > a:hover {
-    background-color: transparent !important; /* Removes the black/dark box */
-    color: #D4AF37 !important; /* Highlights active page with gold */
-    font-weight: bold;
-}
-
-/* Modern Link Styling */
-.custom-nav.navbar-inverse .navbar-nav > li > a {
-    color: white !important;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px; /* Slightly smaller for professional look */
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-/* Hover Effect: Gold text instead of background change */
-.custom-nav.navbar-inverse .navbar-nav > li > a:hover {
-    color: #D4AF37 !important;
-    background-color: transparent !important;
-}
-
-/* Fix for the brand/logo */
-.navbar-inverse .navbar-brand {
-    font-family: 'Joan', serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: white !important;
+p {
+    max-width: 1000px; /* Limits width to a readable size */
+    margin-left: auto; /* Centers the block */
+    margin-right: auto;
+    padding: 0 20px;   /* Prevents text from touching edges on mobile */
+    line-height: 1.8;  /* Optional: adds breathing room between lines */
 }
